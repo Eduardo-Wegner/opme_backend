@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = function (control) {
+    app.route('/')
+        .get((req, res) => {
+                res.status(200).json("That's working, woorkiiiiing")
+        })
     app.route('/api/users')
         .get((req, res) => {
             console.log(req.query.count)
