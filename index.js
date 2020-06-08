@@ -21,9 +21,9 @@ class start{
     load_routes(){
         this.routes(this.control).then(() => {
             
-            app.listen(process.env.PORT_HTTP,  ()=>{
-                logger.info(`Listening on PORT: ${process.env.PORT_HTTP}`);
-                console.log(`Listening on PORT: ${process.env.PORT_HTTP}`);
+            app.listen(process.env.PORT || process.env.PORT_HTTP,  ()=>{
+                logger.info(`Listening on PORT: ${process.env.PORT || process.env.PORT_HTTP}`);
+                console.log(`Listening on PORT: ${process.env.PORT || process.env.PORT_HTTP}`);
                 logger.info('####  SERVER INITIALIZED   ####');
                 console.log('####  SERVER INITIALIZED   ####');
             });
