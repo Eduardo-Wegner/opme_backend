@@ -7,9 +7,9 @@ module.exports = function (control) {
         })
     app.route('/api/users')
         .get((req, res) => {
-            console.log(req.query.count)
-            control.data_retrieve('/users?since=' + req.query.count).then(async (resp) => {
-                res.status(200).json({ 'data': resp, next_link: '/api/users?count=' + (parseInt(req.query.count)+30)})
+            console.log(req.query.since)
+            control.data_retrieve('/users?since=' + req.query.since).then(async (resp) => {
+                res.status(200).json({ 'data': resp, next_link: '/api/users?since=' + (parseInt(req.query.count)+30)})
             })            
         })
     app.route('/api/users/:username/details')
