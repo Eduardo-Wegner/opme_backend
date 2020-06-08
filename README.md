@@ -1,5 +1,9 @@
 #OPME CHALLENGE
 
+## CONFIGURE ##
+
+after cloning repository execute following command:' npm install ' to install all dependencies
+
 ## TEST ##
 To run test execute the cmd:  'npm test'
 
